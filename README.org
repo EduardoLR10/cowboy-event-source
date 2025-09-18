@@ -1,6 +1,6 @@
 * Cowboy Event Source
 
-This is a repository to help debug a problem related to SSE and ~cowboy~, hence *C*owboy *E*vent *S*ource.
+This is a repository to help debug a problem related to SSE and ~cowboy~.
 
 ** How to Reproduce
 
