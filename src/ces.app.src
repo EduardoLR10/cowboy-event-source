@@ -1,0 +1,12 @@
+{application, ces, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {mod, {ces_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        cowboy
+    ]},
+    {env, []},
+    {modules, ['ces']}
+ ]}.

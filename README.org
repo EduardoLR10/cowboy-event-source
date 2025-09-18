@@ -1,0 +1,30 @@
+* Cowboy Event Source
+
+This is a repository to help debug a problem related to SSE and ~cowboy~, hence *C*owboy *E*vent *S*ource.
+
+** How to Reproduce
+
+In one terminal you can run (after running ~nix develop~ if you don't have ~rebar3~ installed) and run:
+
+#+BEGIN_SRC shell
+  rebar3 shell
+#+END_SRC
+
+In another terminal, run:
+
+#+BEGIN_SRC shell
+  curl -Nv -H "Accept: text/event-stream" -H "Cache-Control: no-cache" -H "Connection: keep-alive" http://localhost:8080
+#+END_SRC
+
+Wait a bit. You should have your connection closed after some point:
+
+#+BEGIN_SRC shell
+  id: 3D
+  data: Tick
+
+  * transfer closed with outstanding read data remaining
+  * closing connection #0
+  curl: (18) transfer closed with outstanding read data remaining
+#+END_SRC
+
+Why? And how to fix it?
